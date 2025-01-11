@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narayan Infra Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Narayan Infra Portal</h1>
+    </header>
+    <main id="auth">
+        <div class="form-container">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login-btn">Login</button>
+            <p>Don't have an account? <span id="signup-link">Sign up here</span></p>
+        </div>
+    </main>
+    <main id="signup" style="display: none;">
+        <div class="form-container">
+            <h2>Sign Up</h2>
+            <input type="text" id="new-username" placeholder="New Username">
+            <input type="password" id="new-password" placeholder="New Password">
+            <button id="signup-btn">Sign Up</button>
+            <p>Already have an account? <span id="login-link">Login here</span></p>
+        </div>
+    </main>
+    <main id="admin-panel" style="display: none;">
+        <h2>Welcome, Admin</h2>
+        <section>
+            <h3>Announcements</h3>
+            <textarea id="announcement-input" placeholder="Enter announcement"></textarea>
+            <button id="post-announcement-btn">Post Announcement</button>
+            <div class="announcement-list"></div>
+        </section>
+        <section>
+            <h3>Submitted Expenses</h3>
+            <div id="expense-list"></div>
+            <button id="print-receipt-btn">Print Receipt</button>
+            <div id="receipt-preview" style="display: none;"></div>
+        </section>
+        <section>
+            <h3>Messages</h3>
+            <div class="chat-box"></div>
+            <textarea id="chat-input-admin" placeholder="Type a message"></textarea>
+            <button id="send-chat-btn-admin">Send</button>
+        </section>
+        <button id="logout-btn" class="logout-btn">Logout</button>
+    </main>
+    <main id="driver-panel" style="display: none;">
+        <h2>Welcome, Driver</h2>
+        <section>
+            <h3>Submit Expenses</h3>
+            <input type="number" id="toll-expense" placeholder="Toll Expense">
+            <input type="number" id="fuel-expense" placeholder="Fuel Expense">
+            <input type="number" id="distance-travelled" placeholder="Distance Travelled">
+            <button id="submit-expense-btn">Submit</button>
+        </section>
+        <section>
+            <h3>Announcements</h3>
+            <div class="announcement-list"></div>
+        </section>
+        <section>
+            <h3>Messages</h3>
+            <div class="chat-box"></div>
+            <textarea id="chat-input-driver" placeholder="Type a message"></textarea>
+            <button id="send-chat-btn-driver">Send</button>
+        </section>
+        <button id="logout-btn-driver" class="logout-btn">Logout</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
